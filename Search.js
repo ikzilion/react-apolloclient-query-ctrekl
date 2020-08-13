@@ -21,9 +21,9 @@ function searchResult ({ search }) {
     if (error) return <p>Error :(</p>;
 
     return( 
-      <ul key = {data.id}>
+      <ul>
             {data.getCompanyInformation.map(queryResult => (
-              <li> <h1>{queryResult.companyName}</h1>
+              <li key = {queryResult.id}> <h1>{queryResult.companyName}</h1>
               <br/>{queryResult.quickDescription}</li>
              ) )}
         </ul>)
